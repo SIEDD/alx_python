@@ -22,7 +22,3 @@ def validate_password(password):
 
     # Return True only if all conditions are met
     return has_uppercase and has_lowercase and has_digit
-print(validate_password("Password123"))
-print(validate_password("abc123"))
-print(validate_password("Password 123"))
-print(validate_password("password123"))
