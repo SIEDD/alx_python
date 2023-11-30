@@ -15,7 +15,9 @@ import random
 
 number = random.randint(-100, 100)
 
-print(f"{number} is positive" if number > 0 else (f"{number} is zero" if number == 0 else f"{number} is negative"))
+print(f"{number}\n{'is positive' if number > 0 else ('is zero' if number == 0 else 'is negative')}")
+
+
 
 
 
