@@ -24,3 +24,25 @@ def print_arguments():
 if __name__ == "__main__":
     print_arguments()
 
+# # my_program.py
+# import sys
+
+# def print_arguments():
+#     # Get the number of arguments
+#     num_arguments = len(sys.argv) - 1  # Exclude the script name
+
+#     # Print the header
+#     if num_arguments == 0:
+#         print("0 arguments.")
+#         print(".")
+#     elif num_arguments == 1:
+#         print("1 argument:")
+#     else:
+#         print("{} arguments:".format(num_arguments))
+
+#     # Print each argument
+#     for i in range(1, num_arguments + 1):
+#         print("{}: {}".format(i, sys.argv[i]))
+
+# if __name__ == "__main__":
+#     print_arguments()

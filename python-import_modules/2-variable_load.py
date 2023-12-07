@@ -1,8 +1,9 @@
-# main.py
+# # your_program.py
 
-# Import the variable a from variable_load_2.py
-from variable_load_2 import a as loaded_variable
+#if __name__ == "__main__":
+    # Import the variable 'a' from variable_load_2.py
+from variable_load_2 import a
 
-# Print the value of the loaded variable
-print(loaded_variable)
+    # Print the value of 'a'
+print("The value of variable 'a' is:", a)
 
