@@ -1,11 +1,7 @@
-#def raise_exception():
-#     raise TypeError("exception")
+def raise_exception():
+    raise TypeError("exception has been raised")
 
-# # Example usage:
-# raise_exception()
-try:
-    alist = [1,2,3]
-    print(alist[3])
+# Example usage:
+raise_exception("exception has been raised")
 
-except IndexError:
-    print("exception has been raised")
+
