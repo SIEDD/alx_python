@@ -17,6 +17,6 @@ def raise_exception():
 try:
     raise_exception()
 except TypeError as e:
-    print(e)
+    print(e, end="")
     # Additional handling can be added if needed
 
