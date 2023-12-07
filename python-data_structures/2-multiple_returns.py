@@ -6,6 +6,6 @@ def multiple_returns(sentence):
 sentence = multiple_returns("Holberton is so cool")
 print(sentence)  # Output: (13, 'H')
 
-# sentence_empty = multiple_returns("")
-# print(sentence_empty)  # Output: (0, None)
+sentence_empty = multiple_returns("")
+print(sentence_empty)  # Output: (0, None)
 
