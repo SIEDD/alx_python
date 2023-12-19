@@ -10,7 +10,7 @@ def print_arguments():
     if num_arguments == 1:
         print("argument:", end="")
     elif num_arguments > 1:
-        print("arguments:", end="")
+        print("argument:", end="")
     else:
         print(".", end="")
         return
