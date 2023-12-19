@@ -4,7 +4,7 @@ def print_arguments():
     num_arguments = len(sys.argv) - 1
 
     # Print the number of arguments
-    print(num_arguments, end="")
+    print(num_arguments, end=" ")
 
     # Print "argument" or "arguments" based on the number
     if num_arguments == 1:
