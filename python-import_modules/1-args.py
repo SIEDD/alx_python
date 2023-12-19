@@ -21,7 +21,6 @@ def print_arguments():
 
 if __name__ == "__main__":
     print_arguments()
-import sys
 
 # def print_arguments():
 #     num_arguments = len(sys.argv) - 1
