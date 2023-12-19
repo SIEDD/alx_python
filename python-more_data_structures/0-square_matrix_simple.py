@@ -17,12 +17,12 @@ def square_matrix_simple(matrix=[]):
     return result_matrix
 
 # Example usage:
-input_matrix = [
-    [1, 2, 3],
-    [4, 5, 6],
-    [7, 8, 9]
-]
+# input_matrix = [
+#     [1, 2, 3],
+#     [4, 5, 6],
+#     [7, 8, 9]
+# ]
 
-result = square_matrix_simple(input_matrix)
-print(result)
+# result = square_matrix_simple(input_matrix)
+# print(result)
 
