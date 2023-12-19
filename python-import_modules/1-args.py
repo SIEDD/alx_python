@@ -12,7 +12,7 @@ def print_arguments():
     elif num_arguments > 1:
         print("arguments:", end="")
     else:
-        print(".", end="\n")
+        print(".", end="")
         return
 
     # Print each argument along with its position
