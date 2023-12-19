@@ -9,11 +9,11 @@ def print_matrix_integer(matrix=[[]]):
                 print("{:d} ".format(element), end="")
         print()  # Move to the next line after each row
 
-matrix = [
-    [1, 2, 3],
-    [4, 5, 6],
-    [7, 8, 9]
-]
+# matrix = [
+#     [1, 2, 3],
+#     [4, 5, 6],
+#     [7, 8, 9]
+# ]
 
-print_matrix_integer(matrix)
+# print_matrix_integer(matrix)
 
