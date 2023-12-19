@@ -1,7 +1,8 @@
-def raise_exception_msg(message=""):
-    raise NameError(message)
+def raise_exception_msg():
+    raise NameError("C is fun")
+try:
+    raise_exception_msg()
+except NameError as e:
+    print(e)
 
-# Example usage:
-custom_message = "This is a custom name exception message"
-raise_exception_msg(custom_message)
 
