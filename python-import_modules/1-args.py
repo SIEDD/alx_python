@@ -8,9 +8,9 @@ def print_arguments():
 
     # Print "argument" or "arguments" based on the number
     if num_arguments == 1:
-        print("argument:")
+        print("argument:",end="")
     elif num_arguments > 1:
-        print("arguments:")
+        print("arguments:",end="")
     else:
         print(".", end="")
         return
