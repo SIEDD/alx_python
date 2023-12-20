@@ -9,15 +9,15 @@ Methods:
     area(self): Raises an exception indicating that area() is not implemented.
 """
 class BaseGeometry:
-    """A base class representing basic geometry."""
+    """A base class representing basic geometry.
     
-    def __init__(self):
-        pass
+    Attributes:
+        None
+
+    Methods:
+        area(self): Raises an Exception indicating that area() is not implemented.
+    """
     
     def area(self):
         """Raise an exception indicating that area() is not implemented."""
         raise Exception("area() is not implemented.")
-    
-    def __str__(self):
-        """Return a string representation of the object."""
-        return "BaseGeometry object"
