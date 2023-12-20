@@ -20,7 +20,7 @@ result1 = is_kind_of_class(obj1, ParentClass)
 result2 = is_kind_of_class(obj2, ParentClass)
 result3 = is_kind_of_class(obj3, ParentClass)
 
-print(result1)  # Output: True
-print(result2)  # Output: True
-print(result3)  # Output: False
+# print(result1)  # Output: True
+# print(result2)  # Output: True
+# print(result3)  # Output: False
 
