@@ -1,21 +1,18 @@
+"""
+This is a sample module that demonstrates documentation in Python.
+
+It includes a simple class and a function with docstrings.
+
+Author: Your Name
+"""
+
 class BaseGeometry:
-    """A base class representing basic geometry.
-
-    Attributes:
-        None
-
-    Methods:
-        area(): Raises an Exception indicating that area() is not implemented.
-    """
-
+    """A base class representing basic geometry."""
+    
     def area(self):
         """Raise an exception indicating that area() is not implemented."""
-        raise Exception("area() is not implemented")
-help(BaseGeometry)
-# or
-print(BaseGeometry.__doc__)
+        raise Exception("area() is not implemented.")
 
-help(BaseGeometry.area)
-# or
-print(BaseGeometry.area.__doc__)
-
+def my_function():
+    """This is a sample function with a docstring."""
+    print("Hello, this is a sample function.")
