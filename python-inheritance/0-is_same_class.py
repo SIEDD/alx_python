@@ -3,12 +3,12 @@ def is_same_class(obj, a_class):
     return type(obj) is a_class
 
 # Example usage:
-class ExampleClass:
-    pass
+# class ExampleClass:
+#     pass
 
-obj = ExampleClass()
-result = is_same_class(obj, ExampleClass)
-print(result)  # Output: True
+# obj = ExampleClass()
+# result = is_same_class(obj, ExampleClass)
+# print(result)  # Output: True
 
 
 
