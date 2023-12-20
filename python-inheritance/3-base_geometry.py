@@ -4,3 +4,5 @@ class BaseGeometry:
     def __init__(self):
         """Initialize a new instance of BaseGeometry."""
         pass
+        help(BaseGeometry)
+print(BaseGeometry.__doc__)
