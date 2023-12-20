@@ -1,5 +1,5 @@
 class BaseGeometry:
-    """An empty class representing basic geometry."""
+    """<3-base_geometry.BaseGeometry object at"""
 
     def __init__(self):
         """Initialize a new instance of BaseGeometry."""
