@@ -10,7 +10,7 @@ import sys
 def fetch_url(url):
     try:
         response = requests.get(url)
-        response.raise_for_status()  # Raise an HTTPError for bad responses (4xx or 5xx)
+        response.raise_for_status()  # Raise an HTTPError for bad responses
         
         # If successful, print the response content
         print(response.text)
@@ -23,7 +23,6 @@ def fetch_url(url):
         sys.exit(1)
 
 if __name__ == "__main__":
-    # Example usage: python script.py http://example.com
     if len(sys.argv) != 2:
         print("Usage: python script.py <URL>")
         sys.exit(1)
