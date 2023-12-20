@@ -10,6 +10,5 @@ obj = ExampleClass()
 result = is_same_class(obj, ExampleClass)
 print(result)  # Output: True
 
-result = is_same_class(obj, int)
-print(result)  # Output: False
+
 
