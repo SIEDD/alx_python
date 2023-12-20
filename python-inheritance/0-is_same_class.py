@@ -6,8 +6,8 @@ def is_same_class(obj, a_class):
 class ExampleClass:
     pass
 
-# obj = ExampleClass()
-# result = is_same_class(obj, ExampleClass)
+obj = ExampleClass()
+result = is_same_class(obj, ExampleClass)
 # print(result)  # Output: True
 
 
