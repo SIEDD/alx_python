@@ -71,11 +71,12 @@ class Rectangle(Base):
         return self.__width * self.__height
     """method for validating positive integer"""
     def validate_positive_integer(self, value, attribute):
+        """raising type and value errors"""
         if not isinstance(value, int):
             raise TypeError(f"{attribute} must be an integer")
         elif value <= 0:
             raise ValueError(f"{attribute} must be > 0")    
-
+    """method for validating non-negative integers"""
     def validate_non_negative_int(self, attribute, value):
         """Validate that the given value is a non-negative integer."""
         if not isinstance(value, int):
