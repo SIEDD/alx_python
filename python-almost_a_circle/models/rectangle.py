@@ -71,4 +71,4 @@ class Rectangle(Base):
         if not isinstance(value, int):
             raise TypeError(f"{attribute} must be an integer")
         elif value < 0:
-            raise ValueError(f"{attribute} must be > 0")
+            raise ValueError(f"{attribute} must be >= 0")
