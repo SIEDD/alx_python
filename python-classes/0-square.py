@@ -37,8 +37,5 @@ class Square:
         """Get the size of the square."""
         return self.__size
 
-# Example usage
-square = Square(3)
-print(square.__class__)
-print(square.__dict__)
+
 
