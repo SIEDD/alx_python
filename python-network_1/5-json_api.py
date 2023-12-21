@@ -20,5 +20,6 @@ try:
         name = check_json.get("name")
         print(f"[{id}] {name}")
 except ValueError:
+    print("No result if the JSON is empty")
     
 
