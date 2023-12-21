@@ -66,6 +66,15 @@ class Rectangle(Base):
         self.validate_non_negative_int("y", value)
         self.__y = value
 
+    def area(self):
+        return self.__width * self.__height
+
+    def validate_positive_integer(self, value, attribute):
+        if not isinstance(value, int):
+            raise TypeError(f"{attribute} must be an integer")
+        elif value <= 0:
+            raise ValueError(f"{attribute} must be > 0")    
+
     def validate_non_negative_int(self, attribute, value):
         """Validate that the given value is a non-negative integer."""
         if not isinstance(value, int):
