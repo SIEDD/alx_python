@@ -39,11 +39,10 @@ class Square:
         """Get the size of the square."""
         return self.__size
 
-# Example usage
-square = Square(3)
+# square = Square(3)
 
-try:
-    print(square.size)
-except AttributeError:
-    raise AttributeError("'Square' object has no attribute 'size'")
+# try:
+#     print(square.size)
+# except AttributeError:
+#     raise AttributeError("'Square' object has no attribute 'size'")
 
