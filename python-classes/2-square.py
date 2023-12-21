@@ -12,6 +12,7 @@ Methods:
 """
 """this class represents a square"""
 class Square:
+    """the class represents a square"""
     def __init__(self, size=0):
         """
         Initializes a new instance of the Square class.
