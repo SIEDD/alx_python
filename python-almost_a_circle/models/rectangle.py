@@ -65,6 +65,21 @@ class Rectangle(Base):
         """Setter for y."""
         self.validate_non_negative_int("y", value)
         self.__y = value
+        """new method update"""
+    def update(self, *args):
+        """parameters"""
+        if args:
+            """conditions"""
+            if len(args) >= 1:
+                self.id = args[0]
+            if len(args) >= 2:
+                self.width = args[1]
+            if len(args) >= 3:
+                self.height = args[2]
+            if len(args) >= 4:
+                self.x = args[3]
+            if len(args) >= 5:
+                self.y = args[4]    
     """mehod for area of rectangle"""
     def area(self):
         """returns the width and height"""
