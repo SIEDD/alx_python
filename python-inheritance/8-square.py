@@ -2,6 +2,7 @@
 Rectangle = __import__('7-rectangle').Rectangle
 """class containing square"""
 class Square(Rectangle):
+    """method for square"""
     def __init__(self, size):
         self.__size = size
         self.integer_validator("size", size)
