@@ -65,10 +65,11 @@ class Rectangle(Base):
         """Setter for y."""
         self.validate_non_negative_int("y", value)
         self.__y = value
-
+    """mehod for area of rectangle"""
     def area(self):
+        """returns the width and height"""
         return self.__width * self.__height
-
+    """method for validating positive integer"""
     def validate_positive_integer(self, value, attribute):
         if not isinstance(value, int):
             raise TypeError(f"{attribute} must be an integer")
