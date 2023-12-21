@@ -66,8 +66,8 @@ class Rectangle(Base):
         self.validate_non_negative_int("y", value)
         self.__y = value
         """new method update"""
-    def update(self, *args):
-        """parameters"""
+    def update(self, *args, **kwargs):
+        """arguments conditions"""
         if args:
             """conditions"""
             if len(args) >= 1:
@@ -79,7 +79,10 @@ class Rectangle(Base):
             if len(args) >= 4:
                 self.x = args[3]
             if len(args) >= 5:
-                self.y = args[4]    
+                self.y = args[4]
+        else:
+            for key, value in kwargs.items():
+                setattr(self, key, value)   
     """mehod for area of rectangle"""
     def area(self):
         """returns the width and height"""
