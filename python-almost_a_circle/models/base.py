@@ -1,11 +1,10 @@
-# models/base.py
-
+"""this is the base class"""
 class Base:
     """Base class for other classes."""
 
-    # private class attribute
+    """the private class attribute"""
     __nb_objects = 0
-
+    """constructor method"""
     def __init__(self, id=None):
         """
         Constructor for the Base class.
