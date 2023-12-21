@@ -12,7 +12,7 @@ data_to_send = {
 
 response = requests.post(url=url, data=data_to_send)
 try:
-    check_json = requests.json()
+    check_json = response.json()
     if not check_json:
         print("No result")
     else:
