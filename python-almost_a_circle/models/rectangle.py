@@ -71,7 +71,7 @@ class Rectangle(Base):
         return self.__width * self.__height
     """method for displaying #sign"""
     def display(self):
-        """output"""
+        """output containing #"""
         for _ in range(self.__y):
             print()
         for _ in range(self.__height):
