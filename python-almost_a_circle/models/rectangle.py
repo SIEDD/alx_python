@@ -76,6 +76,10 @@ class Rectangle(Base):
             print()
         for _ in range(self.__height):
             print(" " * self.__x + "#" * self.__width)
+            """str method"""
+    def __str__(self):
+        """returns the rectangle"""
+        return f"[Rectangle] ({self.id}) {self.x}/{self.y} - {self.width}/{self.height}"        
     """method for validating positive integer"""
     def validate_positive_integer(self, value, attribute):
         """raising type and value errors"""
