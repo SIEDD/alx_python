@@ -3,8 +3,8 @@ import sys
 import requests
 
 """variables"""
-url = sys.argv[1]
-q = "" if len(sys.argv) < 2 else sys.argv[2]
+url = "http://0.0.0.0:5000/search_user"
+q = "" if len(sys.argv) ==1 else sys.argv[1]
 
 data_to_send = {
     'q': q
@@ -12,7 +12,7 @@ data_to_send = {
 
 response = requests.post(url=url, data=data_to_send)
 try:
-    check_json = response.json()
+    check_json = requests.post()
     if not check_json:
         print("No result")
     else:
@@ -20,6 +20,6 @@ try:
         name = check_json.get("name")
         print(f"[{id}] {name}")
 except ValueError:
-    print("No result if the JSON is empty")
+    print("Not a valid JSON")
     
 
