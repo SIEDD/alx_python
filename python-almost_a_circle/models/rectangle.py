@@ -69,6 +69,13 @@ class Rectangle(Base):
     def area(self):
         """returns the width and height"""
         return self.__width * self.__height
+    """method for displaying #sign"""
+    def display(self):
+        """output"""
+        for _ in range(self.__y):
+            print()
+        for _ in range(self.__height):
+            print(" " * self.__x + "#" * self.__width)
     """method for validating positive integer"""
     def validate_positive_integer(self, value, attribute):
         """raising type and value errors"""
