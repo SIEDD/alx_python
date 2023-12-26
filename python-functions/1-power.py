@@ -1,5 +1,5 @@
 def pow(a, b):
-    result = 0.01
+    result = 1
     for _ in range(b):
         result *= a
     return result
