@@ -2,6 +2,7 @@ import MySQLdb
 from sys import argv
 
 if __name__ == "__main__":
+    
     if len(argv) != 5:
         print("Usage: {} <username> <password> <database> <state_name>".format(argv[0]))
         exit(1)
@@ -17,8 +18,7 @@ if __name__ == "__main__":
     )
 
     cursor = db.cursor()
-
-    query = "SELECT * FROM states WHERE name COLLATE utf8_general_ci = '{}' ORDER BY id ASC".format(state_name)
+    query = "SELECT * FROM states WHERE name = '{}' ORDER BY id ASC".format(state_name)
     cursor.execute(query)
 
     rows = cursor.fetchall()
@@ -28,3 +28,4 @@ if __name__ == "__main__":
 
     cursor.close()
     db.close()
+
