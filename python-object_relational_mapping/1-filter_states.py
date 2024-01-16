@@ -2,13 +2,13 @@ import MySQLdb
 from sys import argv
 
 if __name__ == "__main__":
-    
     if len(argv) != 4:
         print("Usage: {} <username> <password> <database>".format(argv[0]))
         exit(1)
 
     username, password, database = argv[1], argv[2], argv[3]
 
+    # Connecting to the MySQL server
     db = MySQLdb.connect(
         host="localhost",
         port=3306,
@@ -16,12 +16,14 @@ if __name__ == "__main__":
         passwd=password,
         db=database
     )
+
     cursor = db.cursor()
 
-    query = "SELECT * FROM states WHERE id = 3"
+    # Executing the SQL query to fetch states starting with 'N'
+    query = "SELECT * FROM states WHERE name LIKE 'N%' ORDER BY id ASC"
     cursor.execute(query)
 
-    row = cursor.fetchone()
+    rows = cursor.fetchall()
 
     for row in rows:
         print(row)
