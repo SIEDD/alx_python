@@ -21,7 +21,7 @@ if __name__ == "__main__":
     query = "SELECT * FROM states WHERE id = 3"
     cursor.execute(query)
 
-    row = cursor.fetchall()
+    row = cursor.fetchone()
 
     for row in rows:
         print(row)
