@@ -21,9 +21,10 @@ if __name__ == "__main__":
     query = "SELECT * FROM states WHERE id = 3"
     cursor.execute(query)
 
-    row = cursor.fetchone()
+    row = cursor.fetchall()
 
-    print(row)
+    for row in rows:
+        print(row)
 
     cursor.close()
     db.close()
