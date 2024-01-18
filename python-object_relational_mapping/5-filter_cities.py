@@ -2,9 +2,9 @@ import MySQLdb
 from sys import argv
 
 if __name__ == "__main__":
-    mysql_username = argv[1],
-    mysql_password = argv[2],
-    mysql_database = argv[3],
+    mysql_username = argv[1]
+    mysql_password = argv[2]
+    mysql_database = argv[3]
     state_name = argv[4]
     connect = MySQLdb.connect(host="localhost",
         port=3306,
