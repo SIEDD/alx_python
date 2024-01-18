@@ -6,7 +6,7 @@ if __name__ == "__main__":
     mysql_password = argv[2]
     mysql_database = argv[3]
     state_name = argv[4]
-    connect = MySQLdb.connect(host="localhost",
+    connect = MySQLdb.connect(host='localhost',
         port=3306,
         user=mysql_username,
         passwd=mysql_password,
