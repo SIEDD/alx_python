@@ -39,7 +39,7 @@ from sys import argv
 
 if __name__ == "__main__":
     if len(argv) != 4:
-        print("page, phoenix")
+        print("Page, Phoenix")
         exit(1)
 
     username, password, database = argv[1], argv[2], argv[3]
