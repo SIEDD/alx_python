@@ -1,27 +1,16 @@
-'''Creating the class BaseGeometry'''
-class BaseGeometry:
-    '''Creating a method to raise an exception'''
-    def area(self):
-        raise Exception('area() is not implemented')
-    '''Checks if the value is an positive integer'''
-    def integer_validator(self, name, value):
-        if type(value) != int:
-            raise TypeError('{} must be an integer'.format(name))
-        if value <= 0:
-            raise ValueError('{} must be greater than 0'.format(name))
-
-'''Creating the class rectangle that inherits from BaseGeometry'''
+""""importing basegeometry"""
+BaseGeometry = __import__('5-base_geometry').BaseGeometry
+"""class for rectangle"""
 class Rectangle(BaseGeometry):
-    '''Initializing...'''
+    """private method"""
     def __init__(self, width, height):
-        self.integer_validator("width", width)
-        self.integer_validator("height", height)
         self.__width = width
         self.__height = height
-    '''Method that prints the result'''
-    def __str__(self):
-        return "[Rectangle] {}/{}".format(self.__width, self.__height)
-
-    '''Method that calculates the area'''
+        self.integer_validator("width", width)
+        self.integer_validator("height", height)
+        """implementing the area method"""
     def area(self):
         return self.__width * self.__height
+    """returning rectangle description"""
+    def __str__(self):
+        return "[Rectangle] {:d}/{:d}".format(self.__width, self.__height)   
