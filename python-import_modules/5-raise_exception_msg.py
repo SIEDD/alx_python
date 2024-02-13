@@ -1,8 +1,10 @@
-def raise_exception_msg():
-    raise NameError("C is fun")
-try:
-    raise_exception_msg()
-except NameError as e:
-    print(e)
+def raise_exception_msg(message=""):
+    raise NameError(message)
 
 
+
+if __name__ == "__main__":
+    try:
+        raise_exception_msg("C is fun")
+    except NameError as er:
+        print(er)
