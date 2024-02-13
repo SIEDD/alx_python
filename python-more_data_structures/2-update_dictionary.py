@@ -1,16 +1,17 @@
 def update_dictionary(a_dictionary, key, value):
     a_dictionary[key] = value
+    return a_dictionary
 
-my_dict = {'a': 'a', 'b': 'b', 'c': 'c', 'd': 'd', 'e': 'e'}
+def print_sorted_dictionary(my_dict):
+    """Print sorted dictionary"""
+    keys = sorted(my_dict)
+    for k in keys:
+        print("{}: {}".format(k, my_dict[k]))
 
-update_dictionary(my_dict, 'a', 'A')
-update_dictionary(my_dict, 'f', 'f')
+if __name__ =='__main__':
 
-for k, v in my_dict.items():
-    print(f"{k}: {v}")
-
-print("xx")
-
-
-
-
+    a_dictionary = {'language': "Cd", 'number': 89, 'track': "Low level"}
+    new_dict = update_dictionary(a_dictionary, 'language', "Python")
+    print_sorted_dictionary(new_dict)
+    print("--")
+    print_sorted_dictionary(a_dictionary)
