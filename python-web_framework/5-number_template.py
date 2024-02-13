@@ -1,32 +1,44 @@
-"""import flask server"""
-from flask import Flask, escape, render_template
+'''import flask server'''
+from flask import Flask, render_template
+'''Creating an instance of the class'''
 app = Flask(__name__)
 
-@app.route("/", strict_slashes=False)
-def hello_hbnb():
+'''routing to designated url'''
+@app.route("/",strict_slashes=False)
+def Hello_HBNB():
     return "Hello HBNB!"
 
-@app.route("/hbnb", strict_slashes=False)
-def hbnb():
+'''routing to /hbnb'''
+@app.route("/hbnb")
+def HBNB():
     return "HBNB"
 
-@app.route("/c/<text>", strict_slashes=False)
-def c_text(text):
-    return "C {}".format(escape(text).replace('_', ' '))
+'''routing to /c'''
+@app.route("/c/<text>")
+def C_fun(text):
+    '''In the text the underscore should be replaced by a space'''
+    formatted_text = text.replace('_', ' ')
+    return f"C {formatted_text}"
 
-@app.route("/python/<text>", strict_slashes=False)
-@app.route("/python", strict_slashes=False)
-def python_text(text="is cool"):
-    return "Python {}".format(escape(text).replace('_', ' '))
+'''Routing to both instances where a text is present and if not it defaults to a given value'''
+@app.route("/python/<text>")
+@app.route("/python/")
+def python_fun(text='is cool'):
+    '''In the text the underscore should be replaced by a space'''
+    formatted_text = text.replace('_', ' ')
+    return f"Python {formatted_text}"
 
-@app.route("/number/<int:n>", strict_slashes=False)
-def is_number(n):
-    return "{} is a number".format(n)
+'''Routing to /number '''
+@app.route("/number/<int:n>")
+def number(n):
+    return f"{n} is a numbers"
 
-@app.route("/number_template/<int:n>", strict_slashes=False)
-def number_template(n):
-    return render_template('5-number.html', n=n)
+'''Routing to /number_template'''
+@app.route("/number_template/<int:n>")
+def temp(n):
+    return render_template("5-number.html", n=n)
 
-if __name__ == "__main__":
-    app.run(host='0.0.0.0', port=5000)
 
+'''runs if it is the main script and not while imported'''
+if __name__=="__main__":
+    app.run(host='0.0.0.0',port=5000, debug=True)
