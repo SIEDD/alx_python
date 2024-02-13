@@ -1,9 +1,8 @@
 def raise_exception():
-    raise TypeError()
+    raise TypeError("Exception raised")
 
-try:
-    raise_exception()
-except TypeError:
-    print("Exception has been raised")
-    
-
+if __name__ == "__main__":
+    try:
+        raise_exception()
+    except TypeError as te:
+        print("Exception raised")
