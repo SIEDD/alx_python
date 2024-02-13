@@ -1,3 +1,3 @@
-def convert_to_celsius(fahrenheit):
-    celsius = (5 / 9) * (fahrenheit - 32)
-    return celsius
+def convert_to_celsius(a):
+    degrees = (a-32) * 5/9
+    return degrees
