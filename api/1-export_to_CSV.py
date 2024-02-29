@@ -1,21 +1,18 @@
-import requests
 import csv
+import requests
 import sys
 
 def get_employee_info(employee_id):
-    # Fetch employee details
     employee_url = f"https://jsonplaceholder.typicode.com/users/{employee_id}"
     response = requests.get(employee_url)
     employee_data = response.json()
     user_id = employee_data['id']
     username = employee_data['username']
 
-    # Fetch employee's TODO list
     todos_url = f"https://jsonplaceholder.typicode.com/users/{employee_id}/todos"
     response = requests.get(todos_url)
     todos_data = response.json()
 
-    # Write to CSV file
     filename = f"{user_id}.csv"
     with open(filename, 'w', newline='') as csvfile:
         csv_writer = csv.writer(csvfile)
@@ -39,4 +36,5 @@ if __name__ == "__main__":
         sys.exit(1)
 
     get_employee_info(employee_id)
+
 
