@@ -1,3 +1,4 @@
+"USER_ID","USERNAME","TASK_COMPLETED_STATUS","TASK_TITLE"
 "2","Antonette","False","suscipit repellat esse quibusdam voluptatem incidunt"
 "2","Antonette","True","distinctio vitae autem nihil ut molestias quo"
 "2","Antonette","False","et itaque necessitatibus maxime molestiae qui quas velit"
@@ -17,4 +18,4 @@
 "2","Antonette","False","sunt cum tempora"
 "2","Antonette","False","totam quia non"
 "2","Antonette","False","doloremque quibusdam asperiores libero corrupti illum qui omnis"
-"2","Antonette","True","totam atque quo nesciunt"
+"2","Antonette","True",""
