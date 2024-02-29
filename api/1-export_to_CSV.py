@@ -1,41 +1,33 @@
 import csv
 import requests
-import sys
+from sys import argv
 
-def export_employee_todo_to_csv(employee_id):
-    # Fetch employee details
-    employee_url = f"https://jsonplaceholder.typicode.com/users/{employee_id}"
-    response = requests.get(employee_url)
-    employee_data = response.json()
-    user_id = employee_data['id']
-    username = employee_data['username']
-
-    # Fetch employee's TODO list
-    todos_url = f"https://jsonplaceholder.typicode.com/users/{employee_id}/todos"
-    response = requests.get(todos_url)
-    todos_data = response.json()
-
-    # Write to CSV file
-    filename = f"{user_id}.csv"
-    with open(filename, 'w', newline='') as csvfile:
-        csv_writer = csv.writer(csvfile)
-        csv_writer.writerow(["USER_ID", "USERNAME", "TASK_COMPLETED_STATUS", "TASK_TITLE"])
-        for task in todos_data:
-            task_completed_status = "True" if task['completed'] else "False"
-            csv_writer.writerow([user_id, username, task_completed_status, task['title']])
-
-    print(f"Data exported to {filename}")
-
-if __name__ == "__main__":
-    if len(sys.argv) != 2:
-        print("Usage: python script.py <employee_id>")
-        sys.exit(1)
+def export_to_CSV(sizeofReq):
     
-    employee_id = sys.argv[1]
-    try:
-        employee_id = int(employee_id)
-    except ValueError:
-        print("Employee ID must be an integer.")
-        sys.exit(1)
+    allTasks = []
 
-    export_employee_todo_to_csv(employee_id)
+    link = "https://jsonplaceholder.typicode.com"
+
+    usersRes = requests.get("{}/users/{}".format(link, sizeofReq))
+    todosRes = requests.get("{}/users/{}/todos".format(link, sizeofReq))
+
+    name = usersRes.json().get('username')
+    todosJson = todosRes.json()
+
+    for task in todosJson:
+        taskRow = []
+        taskRow.append(sizeofReq)
+        taskRow.append(name)
+        taskRow.append(task.get('completed'))
+        taskRow.append(task.get('title'))
+        allTasks.append(taskRow)
+
+    with open("{}.csv".format(sizeofReq), "w") as csvFile:
+        csvWriter = csv.writer(csvFile, quoting=csv.QUOTE_ALL)
+        csvWriter.writerows(allTasks)
+
+    return 0
+
+
+if __name__ == '__main__':
+    export_to_CSV(int(argv[1]))
