@@ -1,5 +1,5 @@
-import requests
 from urllib import response
+import requests
 import sys
 
 url = "https://jsonplaceholder.typicode.com/users"
